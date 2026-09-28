@@ -1,0 +1,25 @@
+Azure Governance & Discovery Portal - Share Setup
+
+1. Install Node.js (18+; 22+ recommended), npm, and Azure CLI.
+2. Sign in with the Azure account that owns/has access to the subscription:
+   az login
+   az account set --subscription "51eaa99b-a883-4ed3-a1bb-882394f5553f"
+
+3. Backend:
+   cd backend
+   Copy-Item .env.example .env
+   npm install
+   npm start
+
+4. Frontend (new terminal):
+   cd frontend
+   Copy-Item .env.example .env
+   npm install
+   npm run dev
+
+5. Open:
+   http://localhost:3000
+
+Do not copy node_modules or dist from another computer. npm install recreates dependencies for the new machine.
+
+Live Azure mode uses DefaultAzureCredential/Azure CLI login. No Azure password, token, client secret, or private key is included in this archive.
